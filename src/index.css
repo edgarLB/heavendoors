@@ -197,3 +197,9 @@ footer {
 .center {
   align-items: center;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}

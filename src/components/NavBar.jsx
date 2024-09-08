@@ -3,20 +3,20 @@ export default function NavBar( props) {
 
     function link(name, addy) {
         this.name = name;
-        this.add = addy;
+        this.addy = addy;
     }
 
-    const links = [new link("Products", ""),
-    new link("Services", ""),
-    new link("About Us", ""),
-    new link("Portfolio", ""),
-    new link("Contact", ""),]
+    const links = [new link("Products", "/products"),
+    new link("Services", "/services"),
+    new link("About Us", "/about"),
+    new link("Portfolio", "/portfolio"),
+    new link("Contact", "/contact"),]
 
     return (
         <div className={`nav-bar ${scrolled ? 'scrolled' : ''}`}>
             {
                 links.map(link => (
-                    <a className="nav-link" key={link.name}>{link.name}</a>
+                    <a className="nav-link" key={link.name} href={link.addy}>{link.name}</a>
                 ))
             }
 
