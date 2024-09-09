@@ -109,7 +109,7 @@ h3 {
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: url("src/assets/heroIMG.JPG");
+  background-image: url("assets/heroIMG.jpg");
   height: 80vh;
   align-self: center;
   background-repeat: no-repeat;
@@ -252,18 +252,34 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  .header {
+    padding: 0.6em 1em;
+  }
+
+  .header.scrolled {
+    padding: 0 1em;
+  }
+
   .page-body {
     margin: 1em;
     margin-top: 4em;
   }
 
   .nav-bar{
-    font-size: 0.9em;
+    font-size: 1em;
     justify-content: center;
   }
 
   .nav-bar.scrolled {
     margin-top: -1.15em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .hero-body h3 {
+    font-size: 1em;
   }
 
   .image-grid {
@@ -276,12 +292,20 @@ a {
 
   .taglines{
     flex-wrap: wrap;
-    gap: 1em;
-    padding: 1em;
+    /*gap: 1em 5em;*/
+    justify-content: center;
+  }
+
+  .tagline {
+    flex: 0 0 calc(50% - 20px);
   }
 
   footer{
     flex-wrap: wrap;
+  }
+
+  .footer-item {
+    gap: 0em
   }
 
   footer p {
@@ -302,7 +326,10 @@ a {
     align-items: flex-start;
   }
   footer .last {
-    /*flex-basis: 40%;*/
+    flex-basis: 40%;
     margin-top: -3em;
   }
+
+  footer .hStack{padding-top: 0.5em}
+
 }

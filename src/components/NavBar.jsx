@@ -8,8 +8,7 @@ export default function NavBar( props) {
 
     const links = [new link("Products", "/products"),
     new link("Services", "/services"),
-    new link("About Us", "/about"),
-    new link("Portfolio", "/portfolio"),
+    new link("About", "/about"),
     new link("Contact", "/contact"),]
 
     return (

@@ -7,7 +7,6 @@ import NavBar from "./components/NavBar.jsx";
 import Footer from "./components/Footer.jsx";
 import Products from "./pages/Products.jsx";
 import Services from "./pages/Services.jsx";
-import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
 import NoPage from "./pages/NoPage.jsx";
 
@@ -40,7 +39,6 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path='/products' element={<Products />} />
               <Route path='/services' element={<Services />} />
-              <Route path='/portfolio' element={<Portfolio />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='*' element={<NoPage />} />
           </Routes>
