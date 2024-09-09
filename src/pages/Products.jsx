@@ -14,11 +14,33 @@ import Gallery from "../components/Gallery.jsx";
 export default function Products() {
 
     const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];
+    const listOffer = ["Special Orders and Colors",
+        "Lock-Set and Key Included",
+        "Heavy Duty Hardware",
+        "Varitey of Sizes",
+        "Bifold, Sliding, and French Doors",
+        "Composite Bulletproof Doors",
+        "Delivery Options",
+        "Standard Doors + more!"
+    ]
     return (
         <div className="page-container">
             <div className="page-body">
                 <h2>Products</h2>
-                <Gallery images={images} />
+                <p className="stock-banner">Doors are in stock! Visit our showroom and see the quality.</p>
+                <div className="products">
+                    <h3>We Offer</h3>
+
+                    <ul>
+                        {listOffer.map(item => (
+                            <li key={item.id}>{item}</li>
+                        ))}
+                    </ul>
+
+                </div>
+                <p className="link3">Questions? <a href="/contact"> Message Me</a></p>
+                <Gallery images={images} type={"Door"} />
+
             </div>
         </div>
     )

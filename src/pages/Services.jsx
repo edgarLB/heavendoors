@@ -15,12 +15,24 @@ import Gallery from "../components/Gallery"
 
 
 export default function Services() {
-
+    const listOffer = ["Bifold Doors", "Sliding Doors", "French Doors", "Interior and Exterior Doors", "Custom Projects", "+ More"
+    ]
     const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
     return (
         <div className="page-container">
             <div className="page-body">
                 <h2>Services</h2>
+                <div className="products">
+                    <h3>We Specialize In Door Installations</h3>
+
+                    <ul>
+                        {listOffer.map(item => (
+                            <li key={item.id}>{item}</li>
+                        ))}
+                    </ul>
+
+                </div>
+                <p className="link3">Questions? <a href="/contact"> Message Me</a></p>
                 <Gallery images={images} type={"Service"}/>
             </div>
         </div>

@@ -251,6 +251,67 @@ a {
   border-radius: 0.6em;
 }
 
+.stock-banner {
+  background-color: var(--light-blue-color);
+  border-radius:0.4em;
+  color: var(--dark_blue-color);
+  text-align: center;
+  border: #1C4371 solid 1px;
+  padding: 0.2em;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.products h3{
+  flex-basis: 100%;
+
+}
+
+
+.products ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  column-gap: 10vw;
+
+}
+
+.link3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.link3 a {
+  color: #343139;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: .125em solid var(--light-blue-color);
+  box-shadow: inset 0 -0.125em 0 var(--light-blue-color);
+  transition: box-shadow 270ms cubic-bezier(0.77, 0, 0.175, 1), color 270ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.link3 a:hover {
+  box-shadow: inset 0 -1.125em 0 var(--light-blue-color);
+  color: #000;
+}
+
+.link3 a:focus {
+  background: #fff;
+  outline: none;
+  background: var(--light-blue-color);
+  color: #fff;
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
 @media only screen and (max-width: 768px) {
   .header {
     padding: 0.6em 1em;
@@ -330,6 +391,22 @@ a {
     margin-top: -3em;
   }
 
-  footer .hStack{padding-top: 0.5em}
+  footer .hStack{
+    padding-top: 0.5em
+  }
 
+  .products {
+    justify-content: flex-start;
+  }
+  .products ul {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    margin-left: -1em;
+    margin-top: 0.5em;
+  }
+
+  .products li {
+    padding: 0.15em 0em;
+  }
 }
