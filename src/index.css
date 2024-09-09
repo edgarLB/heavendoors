@@ -483,6 +483,10 @@ form button:hover {
     padding: 0.6em 1em;
   }
 
+  header h2 {
+    font-size: 1.5em;
+  }
+
   .header.scrolled {
     padding: 0 1em;
   }
@@ -493,7 +497,7 @@ form button:hover {
   }
 
   .nav-bar{
-    font-size: 1em;
+    font-size: 0.89em;
     justify-content: center;
   }
 
@@ -583,5 +587,11 @@ form button:hover {
   .products .image-grid{
     justify-content: center;
   }
+
+
+  .column {
+    padding: 1em 0em;
+  }
+
 
 }
