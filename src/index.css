@@ -250,3 +250,59 @@ a {
   display: block;
   border-radius: 0.6em;
 }
+
+@media only screen and (max-width: 768px) {
+  .page-body {
+    margin: 1em;
+    margin-top: 4em;
+  }
+
+  .nav-bar{
+    font-size: 0.9em;
+    justify-content: center;
+  }
+
+  .nav-bar.scrolled {
+    margin-top: -1.15em;
+  }
+
+  .image-grid {
+    gap: 0.5em
+  }
+  .image-item {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .taglines{
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  footer{
+    flex-wrap: wrap;
+  }
+
+  footer p {
+    font-size: 0.9em;
+  }
+
+  footer .first {
+    flex-basis: 100%;
+  }
+
+  footer .center{
+    /*flex-basis: 10%;*/
+    margin-top: -3em;
+  }
+
+  .center {
+
+    align-items: flex-start;
+  }
+  footer .last {
+    /*flex-basis: 40%;*/
+    margin-top: -3em;
+  }
+}
