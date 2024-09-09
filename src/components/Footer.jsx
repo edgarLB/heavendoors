@@ -8,7 +8,7 @@ export default function Footer() {
             </div>
             <div className="footer-item center">
                 <h4>Socials</h4>
-                <i className="fa-brands fa-facebook" style={{fontSize: '1.5em'}}></i>
+                <a className="facebook" href="" ><i className="fa-brands fa-facebook" style={{fontSize: '1.5em'}}></i></a>
             </div>
             <div className="footer-item last">
                 <h4>Find Us</h4>

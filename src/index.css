@@ -119,11 +119,10 @@ h3 {
   background-position: center;
   align-items: center;
   justify-content: center;
-  z-index: -2;
+  /*z-index: -2;*/
   position: relative;
   margin-top: 4.5em;
   overflow: hidden;
-  pointer-events: none;
 }
 
 
@@ -136,6 +135,7 @@ h3 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-body{
@@ -145,7 +145,7 @@ h3 {
   align-items: center;
   color: white;
   gap: 1.3em;
-  z-index: 1;
+  z-index: 2;
 }
 .button {
   padding: 0.6em 1em;
@@ -156,10 +156,27 @@ h3 {
   background-color: var(--dark_blue-color);
   color: white;
   cursor: pointer;
+  pointer-events: auto;
+  z-index: 3;
 }
 
-.button, .facebook:hover {
+
+.button:hover {
+  background-color: var(--light-blue-color);
+  color: black;
+}
+.facebook:hover {
   opacity: 0.7;
+}
+
+.footer-item .facebook{
+  padding: 0.3em;
+  border-radius: 50%;
+}
+
+.highlight {
+  font-weight: bold;
+  text-shadow: 1px 1px 10px var(--light-blue-color);
 }
 
 .facebook {
@@ -388,9 +405,23 @@ a {
   box-sizing: border-box;
 }
 
+.vCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1C4371;
+}
+
 .column-item {
   margin-top: 1em;
 
+}
+
+.column img {
+  width: 100%;
+  height: 20em;
+  object-fit: cover;
+  border-radius: 0.6em;
 }
 
 .facebook-center {

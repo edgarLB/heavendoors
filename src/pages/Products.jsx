@@ -41,6 +41,7 @@ export default function Products() {
                 <p className="link3">Questions? <a href="/contact"> Message Me</a></p>
                 <Gallery images={images} type={"Door"} />
 
+
             </div>
         </div>
     )
