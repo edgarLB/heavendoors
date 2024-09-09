@@ -11,7 +11,6 @@ import image10 from '../assets/doors/door10.jpg'
 import image11 from '../assets/doors/door11.jpg'
 import Gallery from "../components/Gallery.jsx";
 
-
 export default function Products() {
 
     const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];
