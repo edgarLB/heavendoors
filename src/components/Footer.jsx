@@ -12,11 +12,11 @@ export default function Footer() {
             </div>
             <div className="footer-item">
                 <h4>Find Us</h4>
-                <p>2470 Sunnymeaf Blvd Ste 106
+                <p>2470 Sunnymead Blvd Ste 107 <br/>
                     Moreno Valley, CA 92553</p>
                 <div className="hStack">
                     <i className="fa-solid fa-phone"></i>
-                    <p>(323) 555- 5555</p>
+                    <p>(323) 550 - 0851</p>
                 </div>
             </div>
 

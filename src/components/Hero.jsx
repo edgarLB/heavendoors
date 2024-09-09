@@ -26,7 +26,7 @@ export default function Hero() {
             <div className="hero-body">
                 <h1>Heaven Doors</h1>
                 <h3>Door Retailer, Bi-fold Door Installation Specialist, Renovation<br/>Serving SoCal</h3>
-                <button>Contact</button>
+                <a className="button" href="/contact">Contact</a>
             </div>
         </div>
     )

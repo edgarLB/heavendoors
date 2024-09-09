@@ -1,7 +1,10 @@
 export default function Contact() {
     return (
-        <div>
-            <h1>Contact Us</h1>
+        <div className="page-container">
+
+            <div className="page-body">
+                <h2>Contact</h2>
+            </div>
         </div>
     )
 }

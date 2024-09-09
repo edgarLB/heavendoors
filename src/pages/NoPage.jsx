@@ -1,6 +1,6 @@
 export default function NoPage() {
     return (
-        <div>
+        <div className="page-container">
             <h1>NoPage</h1>
         </div>
     )

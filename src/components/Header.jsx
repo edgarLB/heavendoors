@@ -7,7 +7,7 @@ export default function Header(props) {
             <h2><a href="/">Heaven Doors</a></h2>
             <div className="hStack">
                 <i className="fa-solid fa-phone"></i>
-                <p style={{fontWeight: 'bold'}}>(323) 555- 5555</p>
+                <p style={{fontWeight: 'bold'}}>(323) 550 - 0851</p>
             </div>
         </header>
     )
