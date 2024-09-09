@@ -483,6 +483,12 @@ form button:hover {
     padding: 0.6em 1em;
   }
 
+  .hero {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+
   header h2 {
     font-size: 1.5em;
   }
