@@ -48,6 +48,7 @@ h3 {
   position: fixed;
   margin-top: 0.2em;
   transition: margin-top 0.3s ease;
+  z-index: 10;
 }
 
 .nav-bar.scrolled {
@@ -110,7 +111,7 @@ h3 {
   display: flex;
   flex-direction: column;
   background-image: url("assets/heroIMG.jpg");
-  height: 80vh;
+  height: 50vh;
   align-self: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -311,6 +312,52 @@ a {
   box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+.section {
+  margin: 2em;
+}
+
+.products .image-grid{
+  margin-bottom: 2em;
+}
+
+.products .image-item img{
+  height: 20em;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 100%;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.6em;
+  z-index: 0;
+  position: relative;
+}
+
+.caption {
+  text-align: center;
+}
+
+.caption p {
+  position: absolute;
+  margin: 0;
+  margin-top: 1em;
+  margin-left: 1em;
+  font-weight: bold;
+  background-color: var(--dark_blue-color);
+  padding: 0em 1em;
+  border-radius: 1em;
+  color: white;
+}
+
+
 
 @media only screen and (max-width: 768px) {
   .header {
@@ -395,6 +442,10 @@ a {
     padding-top: 0.5em
   }
 
+  .section {
+    margin: 1em;
+  }
+
   .products {
     justify-content: flex-start;
   }
@@ -409,4 +460,9 @@ a {
   .products li {
     padding: 0.15em 0em;
   }
+
+  .products .image-grid{
+    justify-content: center;
+  }
+
 }

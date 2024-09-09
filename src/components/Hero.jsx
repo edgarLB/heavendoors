@@ -20,8 +20,7 @@ export default function Hero() {
     }, [images.length]);
 
     return (
-        <div className="hero"
-        style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
+        <div className="hero">
             <div className="overlay"></div>
             <div className="hero-body">
                 <h1>Heaven Doors</h1>
