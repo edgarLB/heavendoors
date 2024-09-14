@@ -258,6 +258,7 @@ a {
   display: flex;
   min-height: 69vh;
   margin-top: 4.5em;
+  justify-content: center;
 }
 
 .page-body {
