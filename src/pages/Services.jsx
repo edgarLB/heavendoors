@@ -23,7 +23,7 @@ export default function Services() {
             <div className="page-body">
                 <h2>Services</h2>
                 <div className="products">
-                    <h3>We Specialize In Door Installations</h3>
+                    <h3>We Specialize in Door and Window Installations</h3>
 
                     <ul>
                         {listOffer.map(item => (
@@ -33,7 +33,7 @@ export default function Services() {
 
                 </div>
                 <p className="link3">Questions? <a href="/contact"> Message Me</a></p>
-                <Gallery images={images} type={"Service"}/>
+                <Gallery type="Patio"/>
             </div>
         </div>
     )

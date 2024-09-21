@@ -90,6 +90,10 @@ h3 {
   transition: all 0.2s ease;
 }
 
+.section h2 {
+  width: fit-content;
+}
+
 .header h2:hover{
   scale: 102%;
   text-shadow:0px 0px 10px var(--light-blue-color);
@@ -268,27 +272,60 @@ a {
 }
 
 
-.image-grid {
+.image-grid-home {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1em;
+  margin-bottom: 2em;
 }
 
-.image-item {
-  flex: 1 1 calc(33.333% - 20px);
-  max-width: calc(33.333% - 20px);
+.image-item-home {
+  flex: 1 1 calc(33.333% - 1em);
+  max-width: calc(33.333% - 1em);
   overflow: hidden;
   transition: scale 0.3s ease;
 }
 
-.image-item img {
+.image-item-home img {
   width: 100%;
-  height: 32em;
+  aspect-ratio: 1;
   object-fit: cover;
   display: block;
   border-radius: 0.6em;
+}
+
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1em;
+}
+
+.image-grid-patio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1em;
+}
+
+.image-item {
+  overflow: hidden;
+  border-radius: 0.6em;
+  aspect-ratio: 4 / 6;
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  transition: scale 0.3s ease;
+  background-color: var(--dark_blue-color);
+}
+
+.image-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
+
 
 .image-item:hover {
   scale: 104%;
@@ -319,7 +356,33 @@ a {
   object-fit: contain;
 }
 
+.pop-up-container {
+  position: relative;
+  max-width: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5em;
+  border-radius: 1em;
+}
 
+.pop-up-container button{
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  border-radius: 50%;
+  padding: 0.3em 0.5em;
+  border: 0;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: var(--light-blue-color);
+  color: var(--dark_blue-color);
+  cursor: pointer;
+}
+.pop-up-container button:hover{
+  transform: scale(0.95);
+}
 
 .close-btn {
   position: absolute;
@@ -362,8 +425,10 @@ a {
   padding: 0.2em;
 }
 
+
 .products {
   display: flex;
+  max-width: 1600px;
   justify-content: center;
   flex-wrap: wrap;
 
@@ -385,6 +450,87 @@ a {
   column-gap: 10vw;
 
 }
+
+.products-sort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+
+.products-sort img{
+  width: 100%;
+  border-radius: 0.7em;
+}
+
+.products-item {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 6 - 1em);
+  padding: 0.3em;
+  align-items: center;
+  cursor: pointer;
+  border: solid 1px transparent;
+}
+
+.products-item p{
+  margin: 0;
+  align-self: center;
+  font-weight: bold;
+  border-bottom: .125em solid var(--light-blue-color);
+  box-shadow: inset 0 -0.125em 0 var(--light-blue-color);
+}
+
+.products-item:hover {
+  background-color: var(--light-blue-color);
+  border-radius: 1em;
+}
+
+.selected {
+  background-color: var(--light-blue-color);
+  border-radius: 1em;
+  border: solid 1px var(--dark_blue-color);
+}
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+}
+.pill-dropdown {
+  border: 1px solid var(--light-blue-color);
+  border-radius: 10em;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--light-blue-color);
+  width: fit-content;
+}
+
+.pill-shaped-select {
+  border: none;
+  border-radius: 10em;
+  padding: 0.1em 0.8em;
+  font-size: 1rem;
+  background-color: var(--light-blue-color);
+  padding-right: 2em;
+
+}
+
+.pill-dropdown:hover {
+  border: 1px solid var(--dark_blue-color);
+}
+
+.select-arrow {
+  position: absolute;
+  transform: translate(-200%, 20%);
+  pointer-events: none;
+}
+
+
 
 .link3 {
   display: flex;
@@ -414,7 +560,27 @@ a {
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
   margin: 2em;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.vStack{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+}
+
+.projects {
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .products .image-grid{
@@ -423,20 +589,22 @@ a {
 
 .products .image-item img{
   height: 20em;
+
 }
 
 .video-responsive {
   overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 100%;
+  /*padding-bottom: 56.25%;*/
+  /*position: relative;*/
+  /*height: 100%;*/
 }
 
 .video-responsive iframe {
   left: 0;
   top: 0;
-  height: 100%;
   width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
   border-radius: 0.6em;
   z-index: 0;
   position: relative;
@@ -543,6 +711,20 @@ form button:hover {
 }
 
 
+@media only screen and (max-width: 900px) {
+  .products-item {
+    width: calc(33.3333% - 1em);
+  }
+
+  products-item p {
+    font-size: 0.9em;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -586,15 +768,6 @@ form button:hover {
     font-size: 1em;
   }
 
-  .image-grid {
-    gap: 0.5em
-  }
-  .image-item {
-    flex: 1 1 calc(50% - 10px);
-    max-width: calc(50% - 10px);
-  }
-
-
   .taglines{
     flex-wrap: wrap;
     /*gap: 1em 5em;*/
@@ -610,6 +783,8 @@ form button:hover {
   }
 
   .footer-item {
+    display: flex;
+    justify-content: center;
     gap: 0em
   }
 
@@ -646,6 +821,7 @@ form button:hover {
   .products {
     justify-content: flex-start;
   }
+
   .products ul {
     columns: 1;
     -webkit-columns: 1;
@@ -662,10 +838,38 @@ form button:hover {
     justify-content: center;
   }
 
+  .products-item p{
+    font-size: 0.8em;
+  }
+
 
   .column {
     padding: 1em 0em;
   }
 
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 
+  .image-grid-patio {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+
+  .image-grid-home {
+    justify-content: center;
+  }
+
+  .image-item-home {
+    flex: none;
+    max-width: 100%;
+    overflow: hidden;
+    transition: scale 0.3s ease;
+  }
+
+  .pop-up-container {
+    width: 80%;
+    max-height: 80%;
+    overflow-y: scroll;
+  }
 }

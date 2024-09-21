@@ -21,7 +21,7 @@ export default function Projects() {
 
     return (
         <div className="section">
-            <h2>Installations</h2>
+            <h2 style={{alignSelf: 'flex-start'}}>Installations</h2>
             {projects.map(project => (
                 <Project title={project.title} img1={project.image1} img2={project.image2} video={project.vid} before={project.before} after={after} />
             ))}

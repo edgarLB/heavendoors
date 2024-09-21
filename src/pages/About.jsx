@@ -1,4 +1,5 @@
-import mapIMG from "../assets/map.png";
+import mapIMG from "../assets/map.jpg";
+import showRoom from "../assets/showroom.jpeg";
 
 export default function About() {
      return (
@@ -7,7 +8,9 @@ export default function About() {
                 <h2>About</h2>
                 <div className="split-container">
                     <div className="column">
-                        <p>At <span className="highlight">Heaven Doors</span>, we specialize in expertly installing bi-fold patio doors,
+                        <img src={showRoom} alt="map"/>
+                        <p>At <span className="highlight">Heaven Doors</span>, we specialize in expertly installing
+                            bi-fold patio doors,
                             providing seamless transitions between indoor and outdoor spaces. In addition to
                             installations, we offer a wide selection of high-quality doors, all available in
                             our showroom. As a family-owned business, we pride ourselves
@@ -19,7 +22,7 @@ export default function About() {
                         <h3>Visit Our Showroom</h3>
                         <p className="stock-banner">By Appointment Only</p>
                         <img src={mapIMG} alt="map"/>
-                        <p style={{margin: '0', textAlign: "center"}}>2470 Sunnymead Blvd Ste 107<br/>
+                        <p style={{margin: '0', textAlign: "center"}}>24760 Sunnymead Blvd Ste 107<br/>
                             Moreno Valley, CA 92553</p>
 
                     </div>

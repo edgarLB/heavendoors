@@ -26,7 +26,7 @@ export default function Contact() {
                                 <i className="fa-solid fa-location-dot"></i>
                                 <p style={{fontWeight: 'bold'}}>Schedule a Visit:</p>
                             </div>
-                            <p style={{margin: '0', textAlign: "center"}}>2470 Sunnymead Blvd Ste 107<br/>
+                            <p style={{margin: '0', textAlign: "center"}}>24760 Sunnymead Blvd Ste 107<br/>
                                 Moreno Valley, CA 92553</p>
                         </div>
 

@@ -12,7 +12,7 @@ export default function Footer() {
             </div>
             <div className="footer-item last">
                 <h4>Find Us</h4>
-                <p>2470 Sunnymead Blvd Ste 107 <br/>
+                <p>24760 Sunnymead Blvd Ste 107 <br/>
                     Moreno Valley, CA 92553</p>
                 <div className="hStack">
                     <i className="fa-solid fa-phone"></i>
