@@ -3,7 +3,7 @@ export default function Footer() {
         <footer>
             <div className="footer-item first">
                 <h4>Heaven Doors</h4>
-                <p>Door Retailer, Bi-fold Door Installation Specialist, Renovation</p>
+                <p>Bi-fold Door Installation Specialist, Renovation</p>
                 <p>Serving SoCal</p>
             </div>
             <div className="footer-item center">

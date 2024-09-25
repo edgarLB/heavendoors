@@ -24,7 +24,7 @@ export default function Hero() {
             <div className="overlay"></div>
             <div className="hero-body">
                 <h1>Heaven Doors</h1>
-                <h3>Door Retailer, Bi-fold Door Installation Specialist, Renovation<br/>Serving SoCal</h3>
+                <h3>Bi-fold Door Installation Specialist, Renovation<br/>Serving SoCal</h3>
                 <a className="button" href="/contact">Contact</a>
             </div>
         </div>
