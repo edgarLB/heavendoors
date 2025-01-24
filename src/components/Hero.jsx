@@ -23,9 +23,11 @@ export default function Hero() {
         <div className="hero">
             <div className="overlay"></div>
             <div className="hero-body">
-                <h1>Heaven Doors</h1>
+                <h1>Delivering Unmatched Quality <br/> & Unrivaled Expertise</h1>
                 <h3>Bi-fold Door Installation Specialist, Renovation<br/>Serving SoCal</h3>
-                <a className="button" href="/contact">Contact</a>
+                <div>
+                    <a className="button" href="https://shop.heavendoorsandwindows.com">Shop</a>
+                </div>
             </div>
         </div>
     )

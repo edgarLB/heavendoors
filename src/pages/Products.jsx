@@ -1,12 +1,9 @@
 import Gallery from "../components/Gallery.jsx";
-import sortStandard from "../assets/sortStandard.png"
-import sortFrench from "../assets/sortFrench.png"
-import sortPivot from "../assets/sortPivot.png"
-import sortSliding from "../assets/sortSliding.png"
-import sortFold from "../assets/sortFold.png"
-import sortWindow from "../assets/sortWindow.png"
 import React, {useState} from "react";
 import DetailsPopUp from "../components/DetailsPopUp.jsx";
+import ProductSorter from "../components/ProductSorter.jsx";
+import products from "../productData";
+
 export default function Products() {
 
     const [showPopUp, setShowPopUp] = useState(false); // State to control pop-up visibility
@@ -20,34 +17,15 @@ export default function Products() {
         setShowPopUp(false); // Close the pop-up when needed
     };
 
-    function SortIMG(img, id, alt) {
-        this.img = img;
-        this.id = id;
-        this.alt = alt;
-    }
-
-    const products = [
-        new SortIMG(sortStandard, 1, "Standard Doors"),
-        new SortIMG(sortFrench, 2, "French Doors"),
-        new SortIMG(sortPivot, 3, "Pivot Doors"),
-        new SortIMG(sortSliding, 4, "Sliding Doors"),
-        new SortIMG(sortFold, 5, "Folding Doors"),
-        new SortIMG(sortWindow, 6, "Windows"),
-
-    ]
 
     const [sort, setSort] = useState(0);
     const [sortTitle, setSortTitle] = useState("All Doors and Windows");
-    const handleSortChange = (id, title) => {
-        if (id === sort) {
-            setSortTitle("All Doors and Windows")
-            setSort(0);
-        } else {
-            setSortTitle(title)
-            setSort(id);
-            setMaterial("All")
-        }
-    }
+    const [sortUrl, setSortUrl] = useState("https://shop.heavendoorsandwindows.com/");
+    const handleSortChange = (id, title, url) => {
+        setSortTitle(title);
+        setSort(id);
+        setSortUrl(url)
+    };
 
     const listOffer = ["Special Orders and Colors (Fast 8-10 Weeks Lead Time!)",
         "Lock-Set and Key Included",
@@ -75,7 +53,7 @@ export default function Products() {
     return (
         <div className="page-container">
             <div className="page-body">
-                <h2>Products</h2>
+                <h2>Products Gallery</h2>
                 <p className="stock-banner">Doors are in stock! Visit our showroom and see the quality.</p>
                 <div className="products">
                     <h3>We Offer</h3>
@@ -89,24 +67,23 @@ export default function Products() {
                 </div>
                 <p className="link3">Questions? <a href="/contact"> Message Me</a></p>
 
-                <div className="products-sort">
-                    {products.map((item, index) => (
-                        <div className={item.id === sort ? "products-item selected" : "products-item"} onClick={() => handleSortChange(item.id, item.alt)}>
-                            <img src={item.img} alt={item.alt}/>
-                            <p>{item.alt}</p>
-                        </div>
 
-
-                    ))}
-                </div>
+                <ProductSorter products={products} activeSort={sort} onSortChange={handleSortChange} />
 
                 <div className="vStack" style={{justifyContent: "space-between"}}>
                     <div className="vStack">
-                        <h2>{sortTitle}</h2>
-
                         <div className="hStack" style={{justifyContent: "space-between"}}>
+                            <h2>{sortTitle}</h2>
                             <p className="link3" style={{justifyContent: 'flex-start', margin: '0'}}>
                                 <a href="#" onClick={handleDetailsClick}>Details</a>
+                            </p>
+                        </div>
+
+                        <div className="hStack" style={{justifyContent: "space-between"}}>
+
+
+                            <p className="link3" style={{justifyContent: 'flex-start', margin: '0'}}>
+                            <a href={sortUrl}>Shop</a>
                             </p>
 
                             {/* Pass the show and onClose props to DetailsPopUp */}

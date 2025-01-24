@@ -6,7 +6,8 @@ export default function NavBar( props) {
         this.addy = addy;
     }
 
-    const links = [new link("Products", "/products"),
+    const links = [new link("Shop", "https://shop.heavendoorsandwindows.com"),
+        new link("Gallery", "/products"),
     new link("Services", "/services"),
     new link("About", "/about"),
     new link("Contact", "/contact"),]
