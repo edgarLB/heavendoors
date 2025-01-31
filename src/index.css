@@ -303,6 +303,11 @@ a {
   justify-content: center;
 }
 
+.sort-container {
+  width: 100%;
+  max-width: 1600px;
+}
+
 .page-body {
   margin: 4em;
   width: 100%;
@@ -510,7 +515,7 @@ a {
 .products-item {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 6 - 1em);
+  width: calc(100% / 4 - 1em);
   padding: 0.3em;
   align-items: center;
   cursor: pointer;
@@ -755,7 +760,7 @@ form button:hover {
 
 @media only screen and (max-width: 900px) {
   .products-item {
-    width: calc(33.3333% - 1em);
+    width: calc(25% - 1em);
   }
 
   products-item p {
@@ -880,8 +885,12 @@ form button:hover {
     justify-content: center;
   }
 
+  .products-item {
+    width: calc(25% - 1em);
+  }
+
   .products-item p{
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 
 

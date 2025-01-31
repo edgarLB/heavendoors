@@ -24,7 +24,13 @@ export default function Products() {
     const handleSortChange = (id, title, url) => {
         setSortTitle(title);
         setSort(id);
-        setSortUrl(url)
+        setSortUrl(url);
+
+        if (title.includes("Wrought Iron")) {
+            setMaterial("Wrought Iron");
+        } else {
+            setMaterial("All");
+        }
     };
 
     const listOffer = ["Special Orders and Colors (Fast 8-10 Weeks Lead Time!)",
@@ -38,7 +44,7 @@ export default function Products() {
     ]
 
     const [material, setMaterial] = useState('All');
-    const allMaterials = ['All', 'Rod Iron', 'Composite Bullet-Proof', 'Aluminum'];
+    const allMaterials = ['All', 'Wrought Iron', 'Composite Bullet-Proof', 'Aluminum'];
 
     // Conditional logic for materials based on sort value
     const materials = sort === 0
@@ -66,10 +72,8 @@ export default function Products() {
 
                 </div>
                 <p className="link3">Questions? <a href="/contact"> Message Me</a></p>
-
-
-                <ProductSorter products={products} activeSort={sort} onSortChange={handleSortChange} />
-
+                <h2 style={{ paddingBottom: 0, marginBottom: '-1em', marginTop: '2em' }}>Sort Gallery by Type</h2>
+                <ProductSorter products={products} activeSort={sort} onSortChange={handleSortChange}/>
                 <div className="vStack" style={{justifyContent: "space-between"}}>
                     <div className="vStack">
                         <div className="hStack" style={{justifyContent: "space-between"}}>
@@ -83,7 +87,7 @@ export default function Products() {
 
 
                             <p className="link3" style={{justifyContent: 'flex-start', margin: '0'}}>
-                            <a href={sortUrl}>Shop</a>
+                                <a href={sortUrl}>Shop</a>
                             </p>
 
                             {/* Pass the show and onClose props to DetailsPopUp */}

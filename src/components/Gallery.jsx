@@ -21,14 +21,14 @@ export default function Gallery(props) {
 
     // Mapping the material labels to actual values in the data
     const materialMap = {
-        'Rod Iron': 'iron',
+        'Wrought Iron': 'iron',
         'Composite Bullet-Proof': 'composite',
         'Aluminum': 'aluminum',
         'All': 'All'
     };
 
     // Open tags corresponding to index (1, 2, 3, etc.)
-    const openTags = ['standard', 'french', 'pivot', 'sliding', 'fold', 'window'];
+    const openTags = ['standard', 'french', 'pivot', 'sliding', 'fold', 'window', 'garage'];
 
     useEffect(() => {
         let newFilteredImages = images;
@@ -42,7 +42,7 @@ export default function Gallery(props) {
         }
 
         // Filter by open type
-        if (open && open !== 0) {
+        if (open && open !== 0 && material !== 'Wrought Iron') {
             newFilteredImages = newFilteredImages.filter((img) => {
                 return img.open.some((tag) => tag === openTags[open - 1]);
             });
