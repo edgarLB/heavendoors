@@ -10,7 +10,7 @@ export default function VideoFeed( ) {
     }, []);
 
     return (
-        <div style={{ margin: "2em" }}>
+        <div className="video-feed">
             <h2 style={{alignSelf: 'flex-start'}}>Video Showcase</h2>
             {videoIds.length > 0 && <VideoCarousel videoIds={videoIds} />}
         </div>
