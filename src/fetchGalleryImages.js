@@ -26,7 +26,7 @@ export const fetchGalleryImages = async (isPatio) => {
                     material: materialTags.map(tag => tag.sys.id.replace('material', '')), // Get tag name
                     open: openingTags.map(tag => tag.sys.id.replace('open', '')),   // Get tag name
                 };
-            });
+            }).reverse();
 
             return images;
         } else {

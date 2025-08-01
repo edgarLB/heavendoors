@@ -3,14 +3,16 @@ import Taglines from "../components/Taglines.jsx";
 import Products from "./Products.jsx";
 import Projects from "./Projects.jsx";
 import ShopMenu from "./ShopMenu.jsx";
+import VideoFeed from "../components/VideoFeed.js";
 
 export default function Home() {
     return (
         <div>
             <Hero/>
-            <Taglines/>
-            <ShopMenu/>
+            <VideoFeed/>
             <Projects/>
+            <ShopMenu/>
+            <Taglines/>
         </div>
     )
 }
