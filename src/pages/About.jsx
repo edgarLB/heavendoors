@@ -31,8 +31,29 @@ export default function About() {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                         />
-                        <p style={{margin: '0', textAlign: "center"}}>24760 Sunnymead Blvd Ste 107<br/>
-                            Moreno Valley, CA 92553</p>
+                        <div style={{ textAlign: "center", marginTop: "8px" }}>
+                            <p style={{ margin: 0 }}>
+                                24760 Sunnymead Blvd Ste 107<br />
+                                Moreno Valley, CA 92553
+                            </p>
+                            <a
+                                href="https://www.google.com/maps/dir/?api=1&destination=24760+Sunnymead+Blvd+Ste+107+Moreno+Valley+CA+92553"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    display: "inline-block",
+                                    marginTop: "6px",
+                                    padding: "6px 12px",
+                                    backgroundColor: "#1C4371",
+                                    color: "#fff",
+                                    borderRadius: "20px",
+                                    textDecoration: "none",
+                                    fontWeight: "bold"
+                                }}
+                            >
+                                Get Directions
+                            </a>
+                        </div>
 
                     </div>
                 </div>
